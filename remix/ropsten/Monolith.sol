@@ -1,6 +1,6 @@
 pragma solidity ^0.4.23;
 
-import "chainlink/solidity/contracts/Chainlinked.sol";
+import "github.com/smartcontractkit/chainlink/solidity/contracts/Chainlinked.sol";
 
 contract Monolith is Chainlinked, Ownable {
 

@@ -9,11 +9,6 @@ contract Requester is Chainlinked, Ownable {
   uint256 private currentAmount;
   address private currentSender;
 
-  event RequestFulfilled(
-    bytes32 indexed requestId,
-    uint256 indexed price
-  );
-
   constructor(address _link, address _oracle) Ownable() public {
     setLinkToken(_link);
     setOracle(_oracle);

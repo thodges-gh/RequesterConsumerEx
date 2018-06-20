@@ -57,10 +57,7 @@ contract('Consumer', () => {
       });
 
       it("does not accept the data provided", async () => {
-        await assertActionThrows(async () => {
-          await oc.fulfillData(otherId, response, {from: oracleNode});
-        });
-
+        await oc.fulfillData(otherId, response, {from: oracleNode});
         let received = await cc.lastPrice();
         assert.equal(received, 0);
       });
